@@ -17,7 +17,7 @@ if __name__ == "__main__":
   app.run(host=os.getenv("IP", "0.0.0.0"),
   # then we set the port, and we convert the port to an integer
   # The following code works for production (heroku)
-  port=int(os.getenv("Port", "8080")), debug=True)
+  port=int(os.getenv("Port", "8080"))
   # last parameter we want to pass is debug. By setting it to true, it allows the changes to be picked up automatically in the browser.
   # below syntax is for opening project locally not production (heroku)
   # app.run(debug=True)
