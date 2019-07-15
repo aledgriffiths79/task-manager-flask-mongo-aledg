@@ -14,10 +14,10 @@ def hello():
 if __name__ == "__main__":
   # app.run() function we set the host, we use the os import, we use the getenv object and then we get the IP
   # The following code works for production (heroku)
-  app.run(host=os.getenv("IP", "0.0.0.0"),
+  app.run(host=os.getenv("IP"),
   # then we set the port, and we convert the port to an integer
   # The following code works for production (heroku)
-  port=int(os.getenv("Port", "8080"))
+  port=int(os.getenv("Port")))
   # last parameter we want to pass is debug. By setting it to true, it allows the changes to be picked up automatically in the browser.
   # below syntax is for opening project locally not production (heroku)
   # app.run(debug=True)
