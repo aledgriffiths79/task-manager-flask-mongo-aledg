@@ -11,6 +11,8 @@ app = Flask(__name__)
 def hello():
   return "Hello World ...again"
 
+if __name__ == '__main__':
+    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True) 
 # if __name__ == "__main__":
   # app.run() function we set the host, we use the os import, we use the getenv object and then we get the IP
   # The following code works for production (heroku)
@@ -22,5 +24,4 @@ def hello():
   # below syntax is for opening project locally not production (heroku)
   # app.run(debug=True)
 
-  if __name__ == '__main__':
-    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True) 
+  
