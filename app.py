@@ -22,7 +22,7 @@ def get_tasks():
 
 
 if __name__ == '__main__':
-    # app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True) 
+    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True) 
 # if __name__ == "__main__":
   # app.run() function we set the host, we use the os import, we use the getenv object and then we get the IP
   # The following code works for production (heroku)
@@ -32,6 +32,6 @@ if __name__ == '__main__':
   # port=int(os.getenv("PORT")))
   # last parameter we want to pass is debug. By setting it to true, it allows the changes to be picked up automatically in the browser.
   # below syntax is for opening project locally not production (heroku)
-  app.run(debug=True)
+  # app.run(debug=True)
 
   
