@@ -1,14 +1,9 @@
-# The requirements text will contain a list of the applications that are required for Heroku to run the application. So in order to do that, we will create a requirements.txt file. Write the following in command line
-# pip freeze --local > requirements.txt
-
-# procfile is "an instruction to Heroku as to which file is used as our entry point at the application, which file we use to call the application to get it up and running." 
-# So we'll specify that now using "echo web: Python app.py > Procfile". We're specifying that it's a Python file. And the name of it is app.py, which matches the name of the Python file that we manually created
-
 astroid==2.2.5
 Click==7.0
 colorama==0.4.1
 dnspython==1.16.0
 Flask==1.0.2
+Flask-PyMongo==2.3.0
 isort==4.3.17
 itsdangerous==1.1.0
 Jinja2==2.10.1
