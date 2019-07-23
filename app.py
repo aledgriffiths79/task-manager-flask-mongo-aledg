@@ -24,7 +24,7 @@ def get_tasks():
 def add_task():
   return render_template("addtask.html", categories=mongo.db.categories.find())
 
-app.route("/insert_task", methods=["POST"])
+@app.route("/insert_task", methods=["POST"])
 def insert_task():
   tasks = mongo.db.tasks
   tasks.insert_one(request.form.to_dict())
@@ -32,7 +32,7 @@ def insert_task():
 
 
 if __name__ == '__main__':
-    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True) 
+    # app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True) 
   # app.run() function we set the host, we use the os import, we use the getenv object and then we get the IP
   # The following code works for production (heroku)
   # app.run(host=os.getenv("IP"),
@@ -41,6 +41,6 @@ if __name__ == '__main__':
   # port=int(os.getenv("PORT")))
   # last parameter we want to pass is debug. By setting it to true, it allows the changes to be picked up automatically in the browser.
   # below syntax is for opening project locally not production (heroku)
-  # app.run(debug=True)
+  app.run(debug=True)
 
   # When i run app.py in cmd terminal with app.run syntax in production it will output "TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'"     Why? Because your IP and PORT are set by default on your local machine, which is why you need just app.run() , but with Heroku, you have to specify. 
