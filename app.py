@@ -1,3 +1,4 @@
+# Mini Project with Code Institute
 # EXAMPLE OF A WORKING FLASK APPLICATION
 
 # import flask functionality in order to set up the application for use
